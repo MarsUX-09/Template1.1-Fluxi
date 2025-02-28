@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DermaClear - Premium Moisturizing Cream</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+<body>
+  <div class="container">
+    <!-- Upsell View (Default) -->
+    <div id="upsell-view">
+      <div class="header">
+        <h1 class="title">¡Felicitaciones!</h1>
+      </div>
+      
+      <div class="order-summary">
+        <div class="order-status">
+          <span class="status-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.91 8.84 8.56 2.23a1.93 1.93 0 0 0-1.81 0L3.1 4.13a2.12 2.12 0 0 0-.05 3.69l12.22 6.93a2 2 0 0 0 1.94 0L21 12.51a2.12 2.12 0 0 0-.09-3.67Z"></path><path d="m3.09 8.84 12.35-6.61a1.93 1.93 0 0 1 1.81 0l3.65 1.9a2.12 2.12 0 0 1 .1 3.69L8.73 14.75a2 2 0 0 1-1.94 0L3 12.51a2.12 2.12 0 0 1 .09-3.67Z"></path><line x1="12" y1="22" x2="12" y2="13"></line><path d="M20 13.5v3.37a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13.5"></path></svg>
+            Tu orden ya fue realizada y llegará muy pronto
+          </span>
+        </div>
+        
+        <div class="product-item">
+          <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=800&auto=format&fit=crop&q=80" alt="Producto Principal" class="product-image-2">
+          <div class="product-details">
+            <p class="product-name">Producto Principal</p>
+            <p class="product-quantity">Cantidad: 1</p>
+          </div>
+          <p class="product-price">$99.99</p>
+        </div>
+        
+        <div class="product-item">
+          <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&auto=format&fit=crop&q=80" alt="Bump Offer" class="product-image-2">
+          <div class="product-details">
+            <p class="product-name">Bump Offer</p>
+            <p class="product-quantity">Cantidad: 1</p>
+          </div>
+          <p class="product-price">$29.99</p>
+        </div>
+        
+        <div class="order-total">
+          <div>
+            <p class="total-label">Total</p>
+            <span class="free-shipping-badge">¡Envío Gratis!</span>
+          </div>
+          <p class="total-price">$129.98</p>
+        </div>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="upsell-content">
+        <h2 class="section-title">¡Tienes una oferta exclusiva para ti!</h2>
+        
+        <div class="upsell-product">
+          <div class="product-details-row">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80" alt="Audífonos Premium" class="product-image-2">
+            <div class="product-info">
+              <h3 class="product-title">Audífonos Premium</h3>
+            </div>
+            <div class="product-pricing">
+              <p class="special-price">$49.99</p>
+              <p class="original-price">$89.99</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="action-buttons">
+          <button class="btn btn-accept" onclick="showDownsell()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Aceptar oferta adicional
+          </button>
+          <button class="btn btn-reject" onclick="showDownsell()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            No aceptar oferta especial
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Downsell View -->
+    <div id="downsell-view" class="hidden">
+      <div class="header">
+        <h1 class="title title-small">Resumen de mi orden</h1>
+      </div>
+      
+      <div class="compact-summary">
+        <div class="compact-summary-content">
+          <div class="compact-products">
+            <div class="product-stack">
+              <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=800&auto=format&fit=crop&q=80" alt="Producto Principal" class="stacked-image">
+              <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&auto=format&fit=crop&q=80" alt="Bump Offer" class="stacked-image">
+            </div>
+            <div class="compact-info">
+              <p class="compact-title">Tu orden actual</p>
+              <p class="compact-subtitle">2 productos</p>
+            </div>
+          </div>
+          <div class="compact-pricing">
+            <p class="compact-price">$129.98</p>
+            <span class="compact-shipping">Envío Gratis</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="divider"></div>
+      
+      <div class="downsell-content">
+        <h2 class="section-title section-title-large">¡Última oportunidad de agregar este producto a tu orden!</h2>
+        
+        <div class="upsell-product">
+          <div class="product-details-row">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80" alt="Audífonos Premium" class="product-image-2">
+            <div class="product-info">
+              <h3 class="product-title">Audífonos Premium</h3>
+              <span class="discount-badge">¡55% de descuento adicional!</span>
+            </div>
+            <div class="product-pricing">
+              <p class="special-price">$39.99</p>
+              <p class="original-price">$89.99</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="action-buttons">
+          <button class="btn btn-accept" onclick="showThankYou()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            ¡Sí! Agregar a mi orden por solo $39.99
+          </button>
+          <button class="btn btn-reject" onclick="showThankYou()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            No, gracias
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Thank You View -->
+    <div id="thank-you-view" class="hidden">
+      <div class="thank-you-header">
+        <h1 class="title">¡Gracias por tu compra!</h1>
+        <p class="subtitle">Tu pedido está siendo procesado</p>
+      </div>
+      
+      <div class="thank-you-content">
+        <div class="shipping-info">
+          <span class="shipping-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M20.91 8.84 8.56 2.23a1.93 1.93 0 0 0-1.81 0L3.1 4.13a2.12 2.12 0 0 0-.05 3.69l12.22 6.93a2 2 0 0 0 1.94 0L21 12.51a2.12 2.12 0 0 0-.09-3.67Z"></path><path d="m3.09 8.84 12.35-6.61a1.93 1.93 0 0 1 1.81 0l3.65 1.9a2.12 2.12 0 0 1 .1 3.69L8.73 14.75a2 2 0 0 1-1.94 0L3 12.51a2.12 2.12 0 0 1 .09-3.67Z"></path><line x1="12" y1="22" x2="12" y2="13"></line><path d="M20 13.5v3.37a2.06 2.06 0 0 1-1.11 1.83l-6 3.08a1.93 1.93 0 0 1-1.78 0l-6-3.08A2.06 2.06 0 0 1 4 16.87V13.5"></path></svg>
+            Envío gratis - Entrega estimada: 3-5 días hábiles
+          </span>
+        </div>
+        
+        <div class="final-products">
+          <div class="final-product-item">
+            <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=800&auto=format&fit=crop&q=80" alt="Producto Principal" class="final-product-image">
+            <div class="final-product-details">
+              <p class="final-product-name">Producto Principal</p>
+              <p class="final-product-quantity">Cantidad: 1</p>
+            </div>
+            <p class="final-product-price">$99.99</p>
+          </div>
+          
+          <div class="final-product-item">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&auto=format&fit=crop&q=80" alt="Bump Offer" class="final-product-image">
+            <div class="final-product-details">
+              <p class="final-product-name">Bump Offer</p>
+              <p class="final-product-quantity">Cantidad: 1</p>
+            </div>
+            <p class="final-product-price">$29.99</p>
+          </div>
+          
+          <div class="final-product-item">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80" alt="Audífonos Premium" class="final-product-image">
+            <div class="final-product-details">
+              <p class="final-product-name">Audífonos Premium</p>
+              <p class="final-product-quantity">Cantidad: 1</p>
+            </div>
+            <p class="final-product-price">$39.99</p>
+          </div>
+          
+          <div class="final-order-total">
+            <div>
+              <p class="final-total-label">Total Final</p>
+              <span class="final-shipping">Envío Gratis</span>
+            </div>
+            <p class="final-total-price">$169.97</p>
+          </div>
+        </div>
+      </div>
+      <button class="buy-button" onclick="window.location.href='./index.html'">
+        <span>FINALIZAR</span> 
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function showDownsell() {
+      document.getElementById('upsell-view').classList.add('hidden');
+      document.getElementById('downsell-view').classList.remove('hidden');
+      document.getElementById('thank-you-view').classList.add('hidden');
+    }
+    
+    function showThankYou() {
+      document.getElementById('upsell-view').classList.add('hidden');
+      document.getElementById('downsell-view').classList.add('hidden');
+      document.getElementById('thank-you-view').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
