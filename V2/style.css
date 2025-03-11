@@ -105,9 +105,16 @@ button {
     display: inline-block !important;
   }
   .summary-details {
-    display: flex;
-    gap: 2rem;
+    display: inline-block;
     align-items: center;
+    margin-left: 1rem;
+  }
+  .summary-details-2 {
+    display: inline-block;
+    align-items: end;
+    margin-right: 1rem;
+    text-align: end;
+    font-size: 0.8rem;
   }
   .fixed-bottom-checkout .summary-content {
     display: flex;
@@ -2331,12 +2338,16 @@ font-size: 0.875rem;
 }
 
 .text-xs {
-font-size: 0.8rem;
+font-size: 0.75rem;
 }
 
 .text-xs-2 {
   font-size: 0.7rem;
   padding: 0.3rem 0.5rem;
+}
+
+.text-xs-3 {
+  font-size: 1.2rem;
 }
 
 .font-bold {
@@ -3803,7 +3814,7 @@ justify-content: center;
 .preload-overlay {
 position: absolute;
 inset: 0;
-background-color: rgba(0, 0, 0, 0.2);
+background-color: rgb(9 4 36 / 56%);
 backdrop-filter: blur(4px);
 }
 
@@ -3811,7 +3822,7 @@ backdrop-filter: blur(4px);
   position: relative;
   background-color: white;
   border-radius: 2rem;
-  padding: 2rem;
+  padding: 0rem 2rem 2rem 2rem;
   box-shadow: var(--shadow-md);
   max-width: 22rem;
   margin: 0 auto;
@@ -3825,15 +3836,21 @@ text-align: center;
 }
 
 .lottie-container {
-width: 12rem;
+width: 18rem;
 height: 12rem;
-margin: 0 auto 1.5rem;
+margin: 0 auto 2rem;
+}
+
+.loading-animation-2 {
+  position: absolute;
+  top: -9%;
+  margin: 0 auto;
+  left: -33%;
 }
 
 .loading-animation {
 width: 100%;
 height: 100%;
-background: url('https://lottie.host/50vR5Fwjgn/animation.json') center/contain no-repeat;
 }
 
 .preload-text h1 {
@@ -3841,12 +3858,16 @@ font-size: 1.875rem;
 font-weight: 700;
 color: var(--color-primary);
 margin-bottom: 0.75rem;
+margin-top: 3rem;   
+margin-bottom: 1rem;
+line-height: 2rem;
 }
 
 .preload-text p {
 color: var(--color-gray);
 font-size: 1.125rem;
 line-height: 1.5;
+margin-top: 1rem;
 }
 
 .preload-status {
@@ -3857,6 +3878,33 @@ justify-content: center;
 gap: 0.5rem;
 color: var(--color-primary);
 font-size: 0.875rem;
+}
+
+/* Agregar estos estilos a tu archivo CSS existente */
+
+.preload-modal .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1000;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.preload-modal .close-button:hover {
+  transform: scale(1.1);
+}
+
+.preload-modal .preload-overlay {
+  cursor: pointer;
+}
+
+.preload-modal .preload-content {
+  position: relative;
 }
 
 /* Order Summary */
@@ -3886,21 +3934,22 @@ font-weight: 700;
 }
 
 .status-badge {
-display: inline-flex;
-align-items: center;
-padding: 0.25rem 0.75rem;
-background-color: var(--color-success-light);
-color: var(--color-success);
-font-size: 0.875rem;
-font-weight: 500;
-border-radius: var(--radius-full);
-gap: 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background-color: #f0fdf4;
+  color: #15803d;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
 }
 
 .summary-products {
-display: flex;
-align-items: center;
-gap: 0.75rem;
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid #e9d5ff;
 }
 
 .product-stack {
@@ -3960,14 +4009,14 @@ border-top: 1px solid #e9d5ff;
 
 /* Winner Tag */
 .winner-tag {
-background-color: var(--color-primary-light);
-border: 1px solid #e9d5ff;
-border-radius: var(--radius-full);
-padding: 0.625rem 1rem;
-display: flex;
-align-items: center;
-gap: 0.5rem;
-margin-bottom: 1rem;
+  background-color: var(--primary-200);
+  border: 2px solid var(--primary-400);
+  border-radius: 1rem 1rem 0rem 0rem;
+  padding: 0.625rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0rem;
 }
 
 .winner-icon {
@@ -4587,5 +4636,53 @@ transition: opacity 300ms ease-in;
   .how-to-use-image {
     aspect-ratio: 2/1; /* Hace que la imagen sea la mitad de alta en móvil */
   }
+}
+
+.preload-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+}
+
+.preload-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: transform 0.2s ease;
+}
+
+.close-modal:hover {
+  transform: scale(1.1);
+}
+
+.close-modal svg {
+  width: 20px;
+  height: 20px;
+  stroke: #666;
 }
 

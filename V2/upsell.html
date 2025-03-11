@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proceso de Compra</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="animations.css">
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 <body>
   <div class="container">
@@ -13,19 +13,29 @@
     <div id="preload-view" class="preload-modal">
       <div class="preload-overlay"></div>
       <div class="preload-content">
+        <button class="close-modal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
         <div class="preload-gradient">
           <div class="preload-inner">
             <div class="lottie-container">
               <!-- Placeholder for Lottie animation -->
-              <div class="loading-animation"></div>
+              <div class="loading-animation">
+                <dotlottie-player src="https://lottie.host/84388e2b-9e1a-42e9-be44-f90259c09166/DPL1V7YELp.lottie" background="transparent" speed="0.5" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+              </div>
+              <div class="loading-animation-2">
+                <dotlottie-player src="https://lottie.host/f9f5e32e-7f59-43fe-89f3-a2f5a2ae4d5a/7INZiquJIe.lottie" background="transparent" speed="0.5" style="width: 500px; height: 300px" loop autoplay></dotlottie-player>
+              </div>
             </div>
             <div class="preload-text">
               <h1>Congratulations, you won!</h1>
+              <span class="bg-green-100 text-green-600 text-xs-3 px-2 py-1 rounded-full font-medium">
+                40% OFF
+              </span>
               <p>You have been selected for an exclusive special offer</p>
-              <div class="preload-status">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12M2 7l10 7 10-7M12 22V7"/></svg>
-                <span>Preparando tu regalo especial...</span>
-              </div>
             </div>
           </div>
         </div>
@@ -49,18 +59,21 @@
             <div class="product-stack">
               <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=800&auto=format&fit=crop&q=80" alt="Producto Principal">
               <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&auto=format&fit=crop&q=80" alt="Bump Offer">
-            </div>
             <div class="summary-details">
               <p class="summary-title">Tu orden actual</p>
               <p class="summary-subtitle">2 productos - $129.98</p>
+              </div>
+              <div class="summary-details-2">
+              <span class="shipping-badge">Envío Gratis</span>
+              <div class="flex items-center gap-1 text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+                  <line x1="7" y1="7" x2="7.01" y2="7"/>
+                </svg>
+                <span class="font-medium">AHORRO TOTAL $50.00</span>
+              </div>
             </div>
           </div>
-          <div class="summary-info">
-            <span class="shipping-badge">Envío Gratis</span>
-            <div class="savings-info">
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
-              <span>Ahorras $50.00</span>
-            </div>
           </div>
         </div>
       </div>
@@ -72,7 +85,7 @@
         <!-- Winner Tag -->
         <div class="winner-tag">
           <div class="winner-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12M2 7l10 7 10-7M12 22V7"/></svg>
+            <dotlottie-player src="https://lottie.host/84388e2b-9e1a-42e9-be44-f90259c09166/DPL1V7YELp.lottie" background="transparent" speed="0.5" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
           </div>
           <span>¡Felicitaciones fuiste el ganador de estas ofertas!</span>
         </div>
@@ -392,6 +405,36 @@ const views = {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
+  const preloadModal = document.getElementById('preload-view');
+  const closeButton = document.querySelector('.close-modal');
+  const preloadOverlay = document.querySelector('.preload-overlay');
+
+  // Función para cerrar el modal
+  function closeModal() {
+    preloadModal.style.opacity = '0';
+    setTimeout(() => {
+      preloadModal.style.display = 'none';
+      // Mostrar la vista de upsell
+      document.getElementById('upsell-view').classList.remove('hidden');
+    }, 300);
+  }
+
+  // Cerrar automáticamente después de 6 segundos
+  setTimeout(closeModal, 6000);
+
+  // Cerrar al hacer clic en el botón X
+  closeButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeModal();
+  });
+
+  // Cerrar al hacer clic fuera del modal
+  preloadOverlay.addEventListener('click', (e) => {
+    if (e.target === preloadOverlay) {
+      closeModal();
+    }
+  });
+
   // Mostrar upsell inmediatamente
   views.upsell.classList.remove('hidden');
   
@@ -478,6 +521,8 @@ function setupGallery() {
     });
   });
 }
+
+
 </script>
 </body>
 </html>
