@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,10 +49,10 @@
       <!-- Order Summary -->
       <div class="order-summary">
         <div class="summary-header">
-          <h2>Resumen de compra</h2>
+          <h2>Order Summary</h2>
           <span class="status-badge">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>
-            Tu orden ya fue realizada y llegará muy pronto
+            Your order has been placed and will arrive soon
           </span>
         </div>
         
@@ -62,17 +62,17 @@
               <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=800&auto=format&fit=crop&q=80" alt="Producto Principal">
               <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&auto=format&fit=crop&q=80" alt="Bump Offer">
             <div class="summary-details">
-              <p class="summary-title">Tu orden actual</p>
-              <p class="summary-subtitle">2 productos - $129.98</p>
+              <p class="summary-title">Your current order</p>
+              <p class="summary-subtitle">2 products - $129.98</p>
               </div>
               <div class="summary-details-2">
-              <span class="shipping-badge">Envío Gratis</span>
+              <span class="shipping-badge">Free Shipping</span>
               <div class="flex items-center text-green-600">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
                   <line x1="7" y1="7" x2="7.01" y2="7"/>
                 </svg>
-                <span class="font-medium">AHORRO $50.00</span>
+                <span class="font-medium">SAVE $50.00</span>
               </div>
             </div>
           </div>
@@ -89,7 +89,12 @@
           <div class="winner-icon">
             <dotlottie-player src="https://lottie.host/84388e2b-9e1a-42e9-be44-f90259c09166/DPL1V7YELp.lottie" background="transparent" speed="0.5" style="width: 170px; height: 300px" loop autoplay></dotlottie-player>
           </div>
-          <span>¡Felicitaciones fuiste el ganador de estas ofertas!</span>
+          <div class="winner-text">
+          <span>You won this amazing offer!</span>
+          <span class="bg-green-100 text-green-600 text-xs-3 px-2 py-1 rounded-full font-medium">
+            40% OFF
+          </span>
+        </div>
           <div class="winner-icon-2">
             <dotlottie-player src="https://lottie.host/84388e2b-9e1a-42e9-be44-f90259c09166/DPL1V7YELp.lottie" background="transparent" speed="0.5" style="width: 170px; height: 300px" loop autoplay></dotlottie-player>
           </div>
@@ -101,12 +106,6 @@
           <div class="product-gallery">
             <div class="main-image">
               <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80" alt="Audífonos Premium">
-              <button class="gallery-nav prev">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-              </button>
-              <button class="gallery-nav next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-              </button>
               <div class="gallery-dots">
                 <button class="dot active"></button>
                 <button class="dot"></button>
@@ -128,49 +127,50 @@
 
           <!-- Product Info -->
           <div class="product-info">
-            <h3>Audífonos Premium</h3>
+            <div class="product-pricing-rating">
+              <div class="product-pricing">
+                <span class="current-price-2">$49.99</span>
+                <span class="original-price">$89.99</span>
+              </div>
+
+              <div class="product-rating">
+                <div class="stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <span class="review-count">(2,945)</span>
+              </div>
+            </div>
+
+            <h3>Premium Headphones</h3>
             <p class="product-description">
-              Experimenta la música como nunca antes con nuestros audífonos premium. 
-              Diseñados para ofrecer un sonido excepcional y máxima comodidad.
+              Experience music like never before with our premium headphones. 
+              Designed to deliver exceptional sound and maximum comfort.
             </p>
 
-            <div class="product-pricing">
-              <span class="current-price">$49.99</span>
-              <span class="original-price">$89.99</span>
-              <span class="discount-badge">-44%</span>
-            </div>
-
-            <div class="product-rating">
-              <div class="stars">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              </div>
-              <span class="review-count">(2,945)</span>
-            </div>
-
             <div class="product-features">
-              <p class="features-title">Características principales:</p>
+              <p class="features-title">Main features:</p>
               <ul>
                 <li>
                   <div class="feature-icon">
                     <span class="material-icons">check</span>
                   </div>
-                  Sonido cristalino de alta fidelidad
+                  Crystal clear high-fidelity sound
                 </li>
                 <li>
                   <div class="feature-icon">
                     <span class="material-icons">check</span>
                   </div>
-                  Cancelación activa de ruido
+                  Active noise cancellation
                 </li>
                 <li>
                   <div class="feature-icon">
                     <span class="material-icons">check</span>
                   </div>
-                  Batería de larga duración (hasta 30h)
+                  Long battery life (up to 30h)
                 </li>
               </ul>
             </div>
@@ -178,15 +178,15 @@
             <div class="product-guarantees">
               <div class="guarantee-item">
                   <span class="material-icons">verified_user</span>              
-                <span>Garantía de 1 año</span>
+                <span>1 Year Warranty</span>
               </div>
               <div class="guarantee-item">
                   <span class="material-icons">schedule</span>           
-                <span>30 días de prueba</span>
+                <span>30-day trial</span>
               </div>
               <div class="guarantee-item">
                   <span class="material-icons">local_shipping</span>
-                   <span>Envío express</span>
+                   <span>Express shipping</span>
               </div>
             </div>
           </div>
@@ -196,11 +196,11 @@
         <div class="action-buttons">
           <button class="btn-accept" onclick="showDownsell()">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            ¡Sí! Agregar a mi orden
+            Yes! Add to my order
           </button>
           <button class="btn-reject" onclick="showDownsell()">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            No, gracias
+            No, thanks
           </button>
         </div>
       </div>
@@ -216,15 +216,15 @@
             <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&auto=format&fit=crop&q=80" alt="Bump Offer">
           </div>
           <div class="summary-details">
-            <p class="summary-title">Tu orden actual</p>
+            <p class="summary-title">Your current order</p>
             <div class="savings-info">
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
-              <span>Ahorras $50.00</span>
+              <span>Save $50.00</span>
             </div>
           </div>
           <div class="summary-total">
             <p class="total-price">$129.98</p>
-            <span class="shipping-badge">Envío Gratis</span>
+            <span class="shipping-badge">Free Shipping</span>
           </div>
         </div>
       </div>
@@ -238,7 +238,7 @@
           <div class="last-chance-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12M2 7l10 7 10-7M12 22V7"/></svg>
           </div>
-          <span>¡Última oportunidad! Oferta especial desbloqueada</span>
+          <span>Last chance! Special offer unlocked</span>
         </div>
 
         <!-- Product Card -->
@@ -274,45 +274,60 @@
 
           <!-- Product Info -->
           <div class="product-info">
-            <div class="product-header">
-              <h3>Audífonos Premium</h3>
-              <span class="super-discount">-55% OFF</span>
+            <div class="product-pricing-rating">
+              <div class="product-pricing">
+                <span class="current-price">$39.99</span>
+                <span class="original-price">$89.99</span>
+              </div>
+
+              <div class="product-rating">
+                <div class="stars">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                </div>
+                <span class="review-count">(2,945)</span>
+              </div>
             </div>
+
+            <h3>Premium Headphones</h3>
             <p class="product-description">
-              ¡No dejes pasar esta oferta irrepetible! Los mismos audífonos premium ahora con un 
-              SUPER DESCUENTO ADICIONAL del 55%. Esta oferta expira en breve y no volverá a repetirse.
+              Don't miss this unrepeatable offer! The same premium headphones now with an
+              ADDITIONAL SUPER DISCOUNT of 55%. This offer expires soon and won't be repeated.
             </p>
 
             <div class="downsell-pricing">
               <div class="price-item">
-                <span class="price-label">Precio original:</span>
+                <span class="price-label">Original price:</span>
                 <span class="price-value line-through">$89.99</span>
               </div>
               <div class="price-item">
-                <span class="price-label">Precio anterior:</span>
+                <span class="price-label">Previous price:</span>
                 <span class="price-value line-through">$49.99</span>
               </div>
               <div class="final-price">
-                <span class="price-label">Precio final:</span>
+                <span class="price-label">Final price:</span>
                 <span class="price-value">$39.99</span>
-                <span class="savings">¡Ahorras $50!</span>
+                <span class="savings">Save $50!</span>
               </div>
             </div>
 
             <div class="product-features">
-              <p class="features-title">Características principales:</p>
+              <p class="features-title">Main features:</p>
               <ul>
                 <li>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  ✨ Exactamente el mismo producto premium
+                  ✨ Exactly the same premium product
                 </li>
                 <li>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  🎯 Mismo sonido cristalino de alta fidelidad
+                  🎯 Same crystal clear high-fidelity sound
                 </li>
                 <li>
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  🔋 Misma batería de larga duración (30h)
+                  🔋 Same long-lasting battery (30h)
                 </li>
               </ul>
             </div>
@@ -320,15 +335,15 @@
             <div class="product-guarantees">
               <div class="guarantee-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                <span>Garantía de 1 año</span>
+                <span>1 Year Warranty</span>
               </div>
               <div class="guarantee-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <span>30 días de prueba</span>
+                <span>30-day trial</span>
               </div>
               <div class="guarantee-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-                <span>Envío express</span>
+                <span>Express shipping</span>
               </div>
             </div>
           </div>
@@ -338,10 +353,10 @@
         <div class="action-buttons">
           <button class="btn-special" onclick="showThankYou()">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            ¡SÍ! Quiero aprovechar este descuento especial
+            YES! I want to take advantage of this special discount
           </button>
           <button class="btn-plain" onclick="showThankYou()">
-            No, prefiero pagar el precio completo
+            No, I prefer to pay full price
           </button>
         </div>
       </div>
@@ -350,22 +365,22 @@
     <!-- Thank You View -->
     <div id="thank-you-view" class="hidden">
       <div class="thank-you-header">
-        <h1>¡Gracias por tu compra!</h1>
-        <p>Tu pedido está siendo procesado</p>
+        <h1>Thank you for your purchase!</h1>
+        <p>Your order is being processed</p>
       </div>
 
       <div class="thank-you-content">
         <div class="shipping-status">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-          Envío gratis - Entrega estimada: 3-5 días hábiles
+          Free shipping - Estimated delivery: 3-5 business days
         </div>
 
         <div class="order-items">
           <div class="order-item">
             <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=800&auto=format&fit=crop&q=80" alt="Producto Principal">
             <div class="item-details">
-              <p class="item-name">Producto Principal</p>
-              <p class="item-quantity">Cantidad: 1</p>
+              <p class="item-name">Main Product</p>
+              <p class="item-quantity">Quantity: 1</p>
             </div>
             <p class="item-price">$99.99</p>
           </div>
@@ -374,7 +389,7 @@
             <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&auto=format&fit=crop&q=80" alt="Bump Offer">
             <div class="item-details">
               <p class="item-name">Bump Offer</p>
-              <p class="item-quantity">Cantidad: 1</p>
+              <p class="item-quantity">Quantity: 1</p>
             </div>
             <p class="item-price">$29.99</p>
           </div>
@@ -383,19 +398,19 @@
             <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80" alt="Audífonos Premium">
             <div class="item-details">
               <p class="item-name">Audífonos Premium</p>
-              <p class="item-quantity">Cantidad: 1</p>
+              <p class="item-quantity">Quantity: 1</p>
             </div>
             <p class="item-price">$39.99</p>
           </div>
 
           <div class="order-total">
             <div class="total-info">
-              <p class="total-label">Total Final</p>
+              <p class="total-label">Final Total</p>
               <div class="total-details">
-                <span class="shipping-note">Envío Gratis</span>
+                <span class="shipping-note">Free Shipping</span>
                 <div class="savings-total">
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
-                  <span>Ahorro total: $50.00</span>
+                  <span>Total savings: $50.00</span>
                 </div>
               </div>
             </div>

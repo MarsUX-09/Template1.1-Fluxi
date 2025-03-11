@@ -98,7 +98,7 @@ button {
   margin-right: 1rem;
   text-align: end;
   font-size: 0.8rem;
-  width: 21%;
+  width: 30%;
 }
 
 .summary-details {
@@ -114,11 +114,12 @@ button {
   }
 
   .summary-details-2 {
-    display: inline-block;
-    align-items: end;
-    margin-right: 1rem;
-    text-align: end;
-    font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  margin-right: 0rem;
+  text-align: end;
+  font-size: 0.8rem;
+  gap: 1rem;
 }
   .product-info h2 {
     font-size: 2rem !important;
@@ -518,8 +519,8 @@ button {
 }
 
 .feature-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: var(--border-radius-xl);
   background-color: var(--primary-100);
   display: flex;
@@ -2015,7 +2016,7 @@ color: #374151;
 }
 
 .text-green-600 {
-color: #059669;
+color: #059669 !important;
 }
 
 .border-purple-500 {
@@ -2409,22 +2410,20 @@ display: flex;
 flex-direction: column;
 }
 
-.grid-cols-4 {
+.grid {
 display: grid;
+}
+
+.grid-cols-4 {
 grid-template-columns: repeat(4, 1fr);
-gap: 0.5rem;
 }
 
 .grid-cols-3 {
-display: grid;
 grid-template-columns: repeat(3, 1fr);
-gap: 0.75rem;
 }
 
 .grid-cols-2 {
-display: grid;
 grid-template-columns: repeat(2, 1fr);
-gap: 1rem;
 }
 
 .items-center {
@@ -3833,7 +3832,7 @@ backdrop-filter: blur(4px);
 .preload-content {
   position: relative;
   background-color: white;
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 0rem 2rem 2rem 2rem;
   box-shadow: var(--shadow-md);
   max-width: 22rem;
@@ -3956,6 +3955,8 @@ font-weight: 700;
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: 9999px;
+  gap: 0.5rem;
+  margin: 0 auto;
 }
 
 .summary-products {
@@ -4024,7 +4025,7 @@ border-top: 1px solid #e9d5ff;
 
 /* Winner Tag */
 .winner-tag {
-  background-color: var(--primary-200);
+  background-color: var(--primary-100);
   border: 2px solid var(--primary-400);
   border-radius: 1rem 1rem 0rem 0rem;
   padding: 0.625rem 1rem;
@@ -4051,6 +4052,11 @@ border-top: 1px solid #e9d5ff;
   text-align: center;
   width: 100%;
   font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.winner-text {
+  margin: 0 auto;
 }
 
 /* Product Card */
@@ -4071,6 +4077,19 @@ border-top: 1px solid #e9d5ff;
 @media (min-width: 1024px) {
 .product-card {
   grid-template-columns: 1fr 1fr;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background-color: #f0fdf4;
+  color: #15803d;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  gap: 0.5rem;
+  margin: 0;
 }
 
 .winner-icon-2 {
@@ -4194,13 +4213,21 @@ margin-bottom: 1rem;
 display: flex;
 align-items: center;
 gap: 0.5rem;
-margin-bottom: 1rem;
+margin-bottom: 0.5rem;
 }
 
 .current-price {
 font-size: 1.5rem;
 font-weight: 700;
 color: var(--color-primary);
+letter-spacing: -1px;
+}
+
+.current-price-2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--primary-600);
+  letter-spacing: -1px;
 }
 
 .original-price {
@@ -4278,7 +4305,7 @@ margin-top: 1rem;
 display: flex;
 align-items: center;
 gap: 0.5rem;
-padding: 0.5rem;
+padding: 0rem 1rem;
 background-color: var(--color-gray-light);
 border-radius: var(--radius-lg);
 }
@@ -4288,9 +4315,9 @@ color: var(--color-primary);
 }
 
 .guarantee-item span {
-font-size: 1rem;
-font-weight: 500;
-color: var(--color-gray);
+font-size: 0.8rem;
+font-weight: 200;
+color: #1e293b;
 }
 
 /* Action Buttons */
@@ -4307,7 +4334,7 @@ margin-top: 1rem;
 .btn-plain {
 width: 100%;
 padding: 1rem;
-border-radius: var(--radius-xl);
+border-radius: 1rem;
 font-weight: 600;
 display: flex;
 align-items: center;
@@ -4320,8 +4347,8 @@ font-size: 1.125rem;
 }
 
 .btn-accept {
-background-color: var(--color-success);
-color: white;
+  background-color: #059669;
+  color: white;
 }
 
 .btn-accept:hover {
@@ -4329,7 +4356,7 @@ background-color: #15803d;
 }
 
 .btn-reject {
-background-color: var(--color-danger);
+background-color: #b1b1b1;
 color: white;
 }
 
@@ -4717,5 +4744,18 @@ transition: opacity 300ms ease-in;
   width: 20px;
   height: 20px;
   stroke: #666;
+}
+
+.product-pricing-rating {
+  align-items: center;
+  display: flex;
+  margin-bottom: 0rem;
+  gap: 1rem;
+}
+
+.product-pricing {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
