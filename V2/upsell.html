@@ -6,6 +6,8 @@
   <title>Proceso de Compra</title>
   <link rel="stylesheet" href="./style.css">
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
@@ -65,12 +67,12 @@
               </div>
               <div class="summary-details-2">
               <span class="shipping-badge">Envío Gratis</span>
-              <div class="flex items-center gap-1 text-green-600">
+              <div class="flex items-center text-green-600">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
                   <line x1="7" y1="7" x2="7.01" y2="7"/>
                 </svg>
-                <span class="font-medium">AHORRO TOTAL $50.00</span>
+                <span class="font-medium">AHORRO $50.00</span>
               </div>
             </div>
           </div>
@@ -85,9 +87,12 @@
         <!-- Winner Tag -->
         <div class="winner-tag">
           <div class="winner-icon">
-            <dotlottie-player src="https://lottie.host/84388e2b-9e1a-42e9-be44-f90259c09166/DPL1V7YELp.lottie" background="transparent" speed="0.5" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+            <dotlottie-player src="https://lottie.host/84388e2b-9e1a-42e9-be44-f90259c09166/DPL1V7YELp.lottie" background="transparent" speed="0.5" style="width: 170px; height: 300px" loop autoplay></dotlottie-player>
           </div>
           <span>¡Felicitaciones fuiste el ganador de estas ofertas!</span>
+          <div class="winner-icon-2">
+            <dotlottie-player src="https://lottie.host/84388e2b-9e1a-42e9-be44-f90259c09166/DPL1V7YELp.lottie" background="transparent" speed="0.5" style="width: 170px; height: 300px" loop autoplay></dotlottie-player>
+          </div>
         </div>
 
         <!-- Product Card -->
@@ -150,15 +155,21 @@
               <p class="features-title">Características principales:</p>
               <ul>
                 <li>
-                  <span class="feature-dot"></span>
+                  <div class="feature-icon">
+                    <span class="material-icons">check</span>
+                  </div>
                   Sonido cristalino de alta fidelidad
                 </li>
                 <li>
-                  <span class="feature-dot"></span>
+                  <div class="feature-icon">
+                    <span class="material-icons">check</span>
+                  </div>
                   Cancelación activa de ruido
                 </li>
                 <li>
-                  <span class="feature-dot"></span>
+                  <div class="feature-icon">
+                    <span class="material-icons">check</span>
+                  </div>
                   Batería de larga duración (hasta 30h)
                 </li>
               </ul>
@@ -166,16 +177,16 @@
 
             <div class="product-guarantees">
               <div class="guarantee-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span class="material-icons">verified_user</span>              
                 <span>Garantía de 1 año</span>
               </div>
               <div class="guarantee-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <span class="material-icons">schedule</span>           
                 <span>30 días de prueba</span>
               </div>
               <div class="guarantee-item">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-                <span>Envío express</span>
+                  <span class="material-icons">local_shipping</span>
+                   <span>Envío express</span>
               </div>
             </div>
           </div>
